@@ -1,0 +1,668 @@
+====Header:
+==nav
+.nav{padding-left:0;margin-bottom:0;list-style:none}
+.nav>li{position:relative;display:block}
+.nav>li>a{position:relative;display:block;padding:10px 15px}
+.nav>li>a:focus,.nav>li>a:hover{text-decoration:none;background-color:#eee}
+.nav>li.disabled>a{color:#777}
+.nav>li.disabled>a:focus,.nav>li.disabled>a:hover{color:#777;text-decoration:none;cursor:not-allowed;background-color:transparent}
+.nav .open>a,.nav .open>a:focus,.nav .open>a:hover{background-color:#eee;border-color:#337ab7}
+.nav .nav-divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}
+.nav>li>a>img{max-width:none}
+==
+.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent} (classe du nav)
+Dans le nav, on a un premier div et a l'interieur on peut creer un ou plusieurs div (div du logo, et div pour le menu)
+premier div :
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+{
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
+}
+
+div du logo:
+.navbar-header {
+    margin-left: 0;
+    margin-right: 0;
+}
+@media (min-width: 768px)
+.navbar-header {
+    float: left;
+}
+le logo : se trouve dans un lien avec une classe :navbar-brand
+#autocollapse .navbar-brand {
+    margin-left: 0;
+}
+.navbar-brand {
+    font-size: inherit;
+    padding: 0;
+}
+.navbar-brand{float:left;height:50px;padding:15px;font-size:18px;line-height:20px}
+.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}
+.navbar-brand>img{display:block}
+@media (min-width:768px){
+.container-fluid>.navbar-collapse,.container-fluid>.navbar-header,.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}
+.navbar-static-top{border-radius:0}
+.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand{margin-left:-15px}
+.navbar-toggle{display:none}
+}
+div pour le menu:
+@media (min-width: 768px)
+.navbar-collapse.collapse {
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+}
+.navbar-collapse {
+    margin: 0 -15px;
+}
+@media (min-width: 768px)
+.navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);-webkit-overflow-scrolling:touch}
+
+a l'intérieur du div précédent: le menu ul class navbar-nav
+.navbar .navbar-nav {
+    display: inline-block;
+}
+@media (min-width: 768px)
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+Dernier div de Header :
+header .navbar {
+    border-width: 0 0 1px;
+    border-radius: 0;
+}
+.subnav {
+    min-height: 40px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-default {
+    background-color: var(--rq-lightblue-200);
+    border-color: var(--rq-lightblue-400);
+}
+
+===
+@media (min-width:768px){
+.navbar{border-radius:4px}
+.navbar-header{float:left}
+.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}
+.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}
+.navbar-collapse.in{overflow-y:visible}
+.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-right:0;padding-left:0}
+.navbar-fixed-bottom,.navbar-fixed-top{border-radius:0}
+}
+
+======
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+rq-body {
+  background-color: var(--rq-grey-50);
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: normal;
+  min-height: 100%;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+===========================================css==================================================
+@charset "UTF-8";
+/* Palette Interne*/
+@import url(https://ressources.gestionexterne.com/fonts/Roboto/roboto.css);
+@import url(https://ressources.gestionexterne.com/fonts/HydraWeb/hydraweb.css);
+@import url(https://ressources.gestionexterne.com/fonts/RevenuQuebecIcons/revenu-quebec-icons.css);
+:root {
+  --rq-white: #ffffff;
+  --rq-black: #000000;
+  --rq-purple-600: #791687;
+  --rq-darkblue-50: #eaf6ff;
+  --rq-darkblue-200: #bedcf2;
+  --rq-darkblue-400: #99b9d3;
+  --rq-darkblue-500: #3373a7;
+  --rq-darkblue-700: #005091;
+  --rq-darkblue-800: #002666;
+  --rq-darkblue-900: #102837;
+  --rq-lightblue-50: #e2f5fa;
+  --rq-lightblue-200: #d1e8ed;
+  --rq-lightblue-400: #a7d0da;
+  --rq-lightblue-500: #6db0c1;
+  --rq-lightblue-700: #3e7c8e;
+  --rq-lightblue-800: #1d5666;
+  --rq-lightblue-900: #0b343f;
+  --rq-grey-50: #f2f2f2;
+  --rq-grey-100: #dedede;
+  --rq-grey-200: #c9c9c9;
+  --rq-grey-400: #a1a1a1;
+  --rq-grey-500: #717171;
+  --rq-grey-800: #4b4b4b;
+  --rq-green-50: #e1ecc8;
+  --rq-green-200: #a8be70;
+  --rq-green-400: #6f8f1e;
+  --rq-green-500: #476e15;
+  --rq-green-800: #114709;
+  --rq-red-50: #f7d4d7;
+  --rq-red-200: #fd989f;
+  --rq-red-400: #f6717a;
+  --rq-red-500: #bd4048;
+  --rq-red-600: #c7402a;
+  --rq-red-800: #74171d;
+  --rq-yellow-50: #ffe7bd;
+  --rq-yellow-200: #fcc76a;
+  --rq-yellow-400: #f5a722;
+  --rq-yellow-500: #e27221;
+  --rq-yellow-800: #8c4600;
+}
+
+/* *:focus {
+    outline: 0 none;
+} */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.rq-lecteur-ecran {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.rq-lecteur-ecran--focalisable:active,
+.rq-lecteur-ecran--focalisable:focus {
+  box-shadow: 0 0 0 0.0625rem var(--rq-white), 0 0 0 0.1875rem var(--rq-black),
+    0 0 0 0.25rem var(--rq-white) !important;
+  position: relative;
+  z-index: 14;
+  clip: auto;
+  display: inline-block;
+  height: auto;
+  overflow: visible;
+  margin: 0.625rem;
+  width: auto;
+}
+
+h1 {
+  color: var(--rq-darkblue-900);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 1.75rem;
+  margin: 1.875rem 0 0.9375rem 0;
+  text-transform: none;
+}
+
+h2 {
+  color: var(--rq-lightblue-800);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.75rem;
+  margin: 1.25rem 0 0.625rem 0;
+  text-transform: none;
+}
+
+h3 {
+  color: var(--rq-darkblue-900);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 1.25rem 0 0.625rem 0;
+}
+
+h4 {
+  color: var(--rq-darkblue-900);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 1.25rem 0 0.625rem 0;
+}
+
+h5 {
+  color: var(--rq-lightblue-800);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 1.25rem 0 0.625rem 0;
+}
+
+h6 {
+  color: var(--rq-darkblue-900);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 0.625rem 0 0.625rem 0;
+}
+
+p {
+  color: var(--rq-grey-800);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0 0 1.25rem 0;
+}
+
+.rq-message-erreur {
+  color: var(--rq-red-500);
+  display: flex;
+  flex-direction: row;
+  line-height: 1.1875rem;
+  margin-top: 0.3125rem;
+}
+.rq-message-erreur--dessus {
+  margin: 0 0 0.3125rem 0;
+}
+.rq-message-erreur__contenu {
+  display: inline;
+  padding-left: 0.3125rem;
+}
+.rq-message-erreur__texte {
+  margin: 0;
+}
+.rq-message-erreur__icone {
+  display: inline;
+}
+
+.rq-lien {
+  border: none;
+  cursor: pointer;
+  color: var(--rq-darkblue-700);
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+  background-color: transparent;
+  display: inline-block;
+}
+.rq-lien:hover,
+.rq-lien:focus {
+  color: var(--rq-darkblue-800);
+}
+.rq-lien:visited {
+  color: var(--rq-purple-600);
+}
+.rq-lien:disabled {
+  color: var(--rq-grey-800);
+  cursor: not-allowed;
+}
+
+.rq-lien:focus {
+  box-shadow: 0 0 0 0.0625rem var(--rq-white), 0 0 0 0.1875rem var(--rq-black),
+    0 0 0 0.25rem var(--rq-white) !important;
+  position: relative;
+  z-index: 14;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+rq-body {
+  background-color: var(--rq-grey-50);
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: normal;
+  min-height: 100%;
+  position: relative;
+}
+
+.rq-conteneur-page {
+  background-color: var(--rq-grey-50);
+  flex: 1 0 auto;
+  padding-bottom: 2.5rem;
+}
+
+.rq-contenu-page {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 0.9375rem;
+}
+.rq-contenu-page__enveloppe {
+  background-color: inherit;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  box-shadow: none;
+  padding: 0;
+}
+.rq-contenu-page__enveloppe::before {
+  content: " ";
+  display: table;
+}
+
+.rq-conteneur {
+  background-color: var(--rq-white);
+  padding: 1.25rem;
+  margin-bottom: 0.625rem;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15);
+}
+.rq-conteneur :first-child {
+  margin-top: 0;
+}
+.rq-conteneur :last-child {
+  margin-bottom: 0;
+}
+
+.rq-separateur-h2 {
+  border-bottom: 0.125rem solid var(--rq-lightblue-500);
+  display: block;
+  margin: 0.4375rem 0;
+}
+
+.rq-separateur-h3 {
+  border-bottom: 0.0625rem solid var(--rq-grey-400);
+  display: block;
+  margin: 0.4375rem 0;
+}
+
+.rq-pied-page {
+  background-color: var(--rq-grey-800);
+  border-top: 0.0625rem solid var(--rq-lightblue-500);
+  color: var(--rq-white);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.rq-droits-auteur {
+  background-color: var(--rq-darkblue-900);
+  padding: 0.625rem 0;
+}
+
+.rq-entete {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 3.125rem;
+  margin: 0 auto;
+  max-width: 75rem;
+}
+
+.rq-logo {
+  align-items: center;
+  color: var(--rq-lightblue-800);
+  display: flex;
+  flex: 1 0 auto;
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  height: 2.8125rem;
+  padding: 0.625rem 1.25rem;
+}
+.rq-logo__lien {
+  color: inherit;
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.rq-logo__lien:hover,
+.rq-logo__lien:focus {
+  outline: none;
+  text-decoration: none;
+}
+.rq-logo--pale {
+  color: var(--rq-white);
+}
+
+@media (max-width: 992px) {
+  .rq-logo {
+    width: 100%;
+    height: auto;
+  }
+}
+.rq-logo__lien:focus {
+  box-shadow: 0 0 0 0.0625rem var(--rq-white), 0 0 0 0.1875rem var(--rq-black),
+    0 0 0 0.25rem var(--rq-white) !important;
+  position: relative;
+  z-index: 14;
+}
+
+.rq-menu-navigation {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 0.9375rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  list-style: none;
+  text-transform: none;
+}
+.rq-menu-navigation--secondaire .rq-menu-navigation__element {
+  background-color: var(--rq-lightblue-200);
+  border-right: 0.0625rem solid var(--rq-lightblue-700);
+}
+.rq-menu-navigation--secondaire .rq-menu-navigation__element:first-child {
+  border-left: 0.0625rem solid var(--rq-lightblue-700);
+}
+.rq-menu-navigation > :first-child .rq-menu-navigation__element {
+  border-left: none;
+}
+.rq-menu-navigation > .rq-menu-navigation__element:first-child {
+  border-left: none;
+}
+.rq-menu-navigation__element {
+  border-right: none;
+  position: relative;
+}
+.rq-menu-navigation__lien {
+  align-items: center;
+  border: none;
+  border-bottom: 0.25rem solid transparent;
+  color: var(--rq-darkblue-900);
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 2.5rem;
+  text-transform: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  padding: 0 0.9375rem;
+  text-decoration: none;
+  background: inherit;
+}
+.rq-menu-navigation__lien:hover,
+.rq-menu-navigation__lien:focus {
+  outline: none;
+  text-decoration: none;
+}
+.rq-menu-navigation__lien > * {
+  pointer-events: none;
+}
+.rq-menu-navigation__lien:hover {
+  color: var(--rq-darkblue-900);
+  text-decoration: none;
+}
+.rq-menu-navigation__lien--actif {
+  background-color: var(--rq-grey-50);
+}
+.rq-menu-navigation__lien--actif:hover {
+  background-color: var(--rq-grey-50);
+}
+.rq-menu-navigation__icone {
+  color: var(--rq-darkblue-700);
+  font-family: "RevenuQuebecIcons";
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 0.625rem;
+}
+
+.rq-menu-navigation-conteneur {
+  background-color: var(--rq-white);
+}
+.rq-menu-navigation-conteneur--secondaire {
+  border-top: 0.0625rem solid var(--rq-lightblue-400);
+}
+
+.rq-onglet {
+  background-color: var(--rq-lightblue-200);
+  border: 0.0625rem solid var(--rq-lightblue-500);
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  color: var(--rq-grey-800);
+  cursor: pointer;
+  font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  position: relative;
+  white-space: nowrap;
+}
+.rq-onglet:hover {
+  background-color: var(--rq-lightblue-400);
+}
+.rq-onglet--actif {
+  background-color: white;
+  border-bottom: 0.0625rem solid white;
+  color: var(--rq-grey-800);
+  cursor: default;
+  z-index: 2;
+}
+.rq-onglet--actif:hover {
+  background-color: white;
+}
+.rq-onglet + .rq-onglet {
+  margin-left: 0.625rem;
+}
+
+.rq-onglet-contenu {
+  display: none;
+}
+.rq-onglet-contenu--actif {
+  background-color: var(--rq-white);
+  border-left: 0.0625rem solid var(--rq-grey-100);
+  border-right: 0.0625rem solid var(--rq-grey-100);
+  border-bottom: 0.0625rem solid var(--rq-grey-100);
+  border-top: 0.0625rem solid var(--rq-lightblue-500);
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-top: -0.0625rem;
+  padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+.rq-onglet-contenu > :first-child {
+  margin-top: 0;
+}
+.rq-onglet-contenu > :last-child {
+  margin-bottom: 0;
+}
+.rq-onglet-contenu > :only-child > :first-child {
+  margin-top: 0;
+}
+.rq-onglet-contenu > :only-child > :last-child {
+  margin-bottom: 0;
+}
+
+.rq-onglet:focus {
+  background-color: var(--rq-lightblue-400);
+  box-shadow: 0 0 0 0.0625rem var(--rq-white), 0 0 0 0.1875rem var(--rq-black),
+    0 0 0 0.25rem var(--rq-white) !important;
+  outline: 0 !important;
+  z-index: 2;
+}
+
+.rq-onglet--actif:focus {
+  background-color: white;
+}
+
+.rq-liens-raccourcis {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+    color: var(--rq-lightblue-400);
+}
+
+.rq-droits-auteur {
+  background-color: var(--rq-darkblue-900);
+  padding: 0.625rem 0;
+	color: var(--rq-white);
+	font-family: "Roboto", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  text-align: center;
+}
