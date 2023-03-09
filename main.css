@@ -206,11 +206,12 @@ img.arti-as{
 .pop1{
 	position:relative;
 	background-color:yellow;
-	margin:20px;
+	margin:20px 20px 20px 0px;
 	gap:40px;
 }
 .pop-h3{
 	display:inline;
+	margin: 0px;
 }
 .pop1 i{
 	position: absolute;
@@ -284,7 +285,7 @@ img.arti-as{
 .populaire{
 	width:39%;
 	background-color:#E7D5CC;
-	padding:20px;
+	padding:0px 20px 20px 20px;
 }
 
 .populaire-content{
@@ -334,4 +335,61 @@ img.arti-as{
 .arti-aside p{
 	/* padding-bottom:30px; */
 	line-height:0px;
+}
+
+/*===================================*/
+.activite{
+	height: 500px;
+	width: 100%;
+}
+
+.marseile{
+	background-color:cadetblue;
+	height: 100%;
+	display:flex;
+	flex-direction:row;
+	gap: 20px;
+
+}
+
+.vieux-port{
+	background-color:chartreuse;
+	width: 25%;
+}
+
+.fort-iles{
+	background-color:chocolate;
+	width: 25%;
+
+}
+
+.fort-pom{
+	background-color:darkolivegreen;
+	
+}
+						
+.ile-friou{
+	background-color:darkslateblue;
+
+}
+
+.parc-national{
+	background-color:greenyellow;
+	width: 25%;
+}
+			
+.parc-notredame{
+	background-color:indianred;
+	width: 25%;
+
+}
+
+.notre-dame{
+	background-color:mediumpurple
+
+}
+						
+.longchamp{
+	background-color:olivedrab;
+
 }
