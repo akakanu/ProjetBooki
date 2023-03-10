@@ -357,6 +357,12 @@ img.arti-as{
 	width: 25%;
 }
 
+.vieux-port img{
+	width: 100%;
+    height: 100%;
+	border-radius:20px 20px 0px 0px;
+}
+
 .fort-iles{
 	background-color:chocolate;
 	width: 25%;
@@ -367,15 +373,33 @@ img.arti-as{
 	background-color:darkolivegreen;
 	
 }
+
+.fort-pom img{
+	width: 100%;
+    height: 200px;
+	border-radius:20px 20px 0px 0px;
+}
 						
 .ile-friou{
 	background-color:darkslateblue;
 
 }
 
+.ile-friou img{
+	width: 100%;
+    height: 200px;
+	border-radius:20px 20px 0px 0px;
+}
+
 .parc-national{
 	background-color:greenyellow;
 	width: 25%;
+}
+
+.parc-national img{
+	width: 100%;
+    height: 100%;
+	border-radius:20px 20px 0px 0px;
 }
 			
 .parc-notredame{
@@ -388,8 +412,20 @@ img.arti-as{
 	background-color:mediumpurple
 
 }
+
+.notre-dame img{
+	width: 100%;
+    height: 200px;
+	border-radius:20px 20px 0px 0px;
+}
 						
 .longchamp{
 	background-color:olivedrab;
 
+}
+
+.longchamp img{
+	width: 100%;
+    height: 150px;
+	border-radius:20px 20px 0px 0px;
 }
