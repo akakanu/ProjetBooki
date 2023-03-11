@@ -5,6 +5,10 @@ body{
 	padding:10px;
 }
 
+.link{
+	margin-left: 10px;
+}
+
 .recherche{
 	margin:10px;
 	background-color:green;
@@ -107,6 +111,10 @@ img.arti-as{
 .navbar-link{
 	color:blue;
 }
+
+a.navbar-link:hover {
+	border-top: solid blue;
+  }
 
 .item-filtre{
 	display:flex;
@@ -339,13 +347,13 @@ img.arti-as{
 
 /*===================================*/
 .activite{
-	height: 500px;
+	height: 600px;
 	width: 100%;
 }
 
 .marseile{
 	background-color:cadetblue;
-	height: 100%;
+	height: 80%;
 	display:flex;
 	flex-direction:row;
 	gap: 20px;
@@ -359,7 +367,7 @@ img.arti-as{
 
 .vieux-port img{
 	width: 100%;
-    height: 100%;
+    height: 90%;
 	border-radius:20px 20px 0px 0px;
 }
 
@@ -376,7 +384,7 @@ img.arti-as{
 
 .fort-pom img{
 	width: 100%;
-    height: 200px;
+    height: 190px;
 	border-radius:20px 20px 0px 0px;
 }
 						
@@ -387,7 +395,7 @@ img.arti-as{
 
 .ile-friou img{
 	width: 100%;
-    height: 200px;
+    height: 190px;
 	border-radius:20px 20px 0px 0px;
 }
 
@@ -398,7 +406,7 @@ img.arti-as{
 
 .parc-national img{
 	width: 100%;
-    height: 100%;
+    height: 90%;
 	border-radius:20px 20px 0px 0px;
 }
 			
@@ -415,7 +423,7 @@ img.arti-as{
 
 .notre-dame img{
 	width: 100%;
-    height: 200px;
+    height: 150px;
 	border-radius:20px 20px 0px 0px;
 }
 						
@@ -426,6 +434,7 @@ img.arti-as{
 
 .longchamp img{
 	width: 100%;
-    height: 150px;
+    height: 200px;
 	border-radius:20px 20px 0px 0px;
+	margin-top: 25px;
 }
